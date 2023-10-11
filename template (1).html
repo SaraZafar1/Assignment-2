@@ -175,7 +175,59 @@
 
 
 
-    </style>
+    </style> 
+<script> 
+
+    var a = 0;
+    var b = 0; 
+    var c = 0; 
+
+        function showA() { 
+            document.getElementById("button1").innerHTML = "a =" + a; 
+        }
+        function add1A() { 
+            a = a + 1; } 
+
+        function addTen() {
+            a = a + 10;
+            }
+
+        function add1All() {
+            a = a + 1; 
+            b = b + 1; 
+            c = c + 1; }
+
+        function showB() {
+        }
+            
+        function add1B() {
+            b = b + 1;} 
+
+        function halfAll() {
+            a = a / 2;
+            b = b / 2; 
+            c = c / 2; }
+
+        function resetAll() {
+            a = 0;
+            b = 0;
+            c = 0; }
+
+        function showC() { 
+        } 
+
+        function add1C() {
+            c = c + 1;} 
+        }
+
+        function addCustomC() { 
+        } 
+
+        function doubleAll() { 
+            a = a * 2; 
+            b = b * 2;
+            c = c * 2; }
+</script>
 </head>
 
 <body>
@@ -198,7 +250,7 @@
     <div class="button1"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
         
        <button class="displayButton">
-    
+       <button id="button1" onclick="showA();">
 <h2>The value of a</h2>
        </button>
     </div>
@@ -210,7 +262,7 @@
     </div>
 
     <div class="button3"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
+        <button onclick = "addTen()";">
 
 <h2>Add 10 to a</h2>
         </button>
@@ -252,7 +304,7 @@
     <div class="button8" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
         <button>
 
-
+<h2>Reset all values</h2>
         </button>
 
     </div>
@@ -289,7 +341,7 @@
     <div class="footer">
         
     </div>
-    
+
 </body>
 
 
