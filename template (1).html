@@ -184,7 +184,7 @@
     var d = 0;
 
         function showA() { 
-            document.getElementById("button1").innerHTML = "a =" + a;}
+            document.getElementById("numberOne").innerHTML = "a =" + a;}
     
         function add1A() { 
             a = a + 1; } 
@@ -199,7 +199,7 @@
             c = c + 1; }
 
         function showB() {
-            document.getElementById("button2").innerHTML = "b =" + b; }
+            document.getElementById("numberTwo").innerHTML = "b =" + b; }
             
         function add1B() {
             b = b + 1;} 
@@ -215,7 +215,7 @@
             c = 0; }
 
         function showC() { 
-            document.getElementById("button3").innerHTML = "b =" + b;}
+            document.getElementById("numberNine").innerHTML = "c =" + c;}
 
         function add1C() {
             c = c + 1;} 
@@ -252,9 +252,8 @@
 
 
     <div class="button1"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-       <button class="displayButton">
-       <button id="button1" onclick="showA();">
-The value of a
+       <button id="numberOne" class="displayButton" onclick="showA();">
+<h2>The value of a</h2>
        </button>
     </div>
 
@@ -281,8 +280,7 @@ The value of a
    
     
     <div class="button5" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button class="displayButton">
-        <button id="button2" onclick="showB():">
+        <button id="numberTwo" class="displayButton" onclick="showB();">
 <h2>The value of b</h2>
 
         </button>
@@ -310,8 +308,8 @@ The value of a
 
     </div>
     <div class="button9" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button class="displayButton">
-        <button id="button" onclick="showC();">
+        <button id="numberNine" class="displayButton" onclick="showC();">
+    
 <h2>The value of c</h2>
         </button>
 
