@@ -7,7 +7,7 @@
         background-color: #680000;
         color: white;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        display:grid;
+        display: grid;
 
         text-align: center;
          font-size: 60px;
@@ -24,7 +24,7 @@
         div {
          align-content: center;
          border: 3px solid black;
-         vertical-align:middle;
+         vertical-align: middle;
          }
 
          button {
@@ -36,7 +36,7 @@
 
          .displayButton {
             background-color: #888888;
-            font-size: 15px;
+            
          }
 
        .title {
@@ -181,10 +181,10 @@
     var a = 0;
     var b = 0; 
     var c = 0; 
-    var d = 0;
+    var d = 1;
 
         function showA() { 
-            document.getElementById("numberOne").innerHTML = "a =" + a;}
+            document.getElementById("numberOne").innerHTML = "a = " + a;}
     
         function add1A() { 
             a = a + 1; } 
@@ -199,7 +199,7 @@
             c = c + 1; }
 
         function showB() {
-            document.getElementById("numberTwo").innerHTML = "b =" + b; }
+            document.getElementById("numberTwo").innerHTML = "b = " + b; }
             
         function add1B() {
             b = b + 1;} 
@@ -215,23 +215,25 @@
             c = 0; }
 
         function showC() { 
-            document.getElementById("numberNine").innerHTML = "c =" + c;}
+            document.getElementById("numberNine").innerHTML = "c = " + c;}
 
         function add1C() {
             c = c + 1;} 
-        
 
-
+    function addCustomC() {
+            c = d;}
 
         function doubleAll() { 
             a = a * 2; 
             b = b * 2;
             c = c * 2; } 
 
-        function footerCustom() {
-            d = d + 1; } 
+       function showFooter() {
+            document.getElementById("customC").innerHTML = "Increase c by " + d; 
+            d = d + 1;}
 
-        function 
+
+        
 </script>
 </head>
 
@@ -338,7 +340,8 @@
 
     </div>
 
-    <div class="footer">
+    <div class="footer" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" > 
+        <button id="customC" class="displayButton" onclick="showFooter();" >
         
     </div>
 
