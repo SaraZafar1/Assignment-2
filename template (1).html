@@ -67,14 +67,15 @@
           grid-column-start: 1;
           grid-column-end: 2;
           color: black;
-          font-size: 15px; }
+          font-size: 30px; }
 
       .button2 {
           grid-row-start: 4;
           grid-row-end: 5;
           grid-column-start: 1;
           grid-column-end: 2;
-              color: black; }
+              color: black; 
+          font-size: 30px;}
 
 
           .button3 {
@@ -82,49 +83,49 @@
           grid-row-end: 6;
           grid-column-start: 1;
           grid-column-end: 2;
-              color: black; }
+              color: black;     font-size: 30px;}
 
           .button4 {
           grid-row-start: 6;
           grid-row-end: 7;
           grid-column-start: 1;
           grid-column-end: 2;
-              color: black; }
+              color: black;     font-size: 30px;}
           
          .button5 {
           grid-row-start: 3;
           grid-row-end: 4;
           grid-column-start: 2;
           grid-column-end: 3;
-              color: black; }
+              color: black;     font-size: 30px; }
 
           .button6 {
           grid-row-start: 4;
           grid-row-end: 5;
           grid-column-start: 2;
           grid-column-end: 3;
-              color: black; }
+              color: black;     font-size: 30px;}
 
           .button7 {
           grid-row-start: 5;
           grid-row-end: 6;
           grid-column-start: 2;
           grid-column-end: 3;
-              color: black; }
+              color: black;     font-size: 30px; }
 
           .button8 {
           grid-row-start: 6;
           grid-row-end: 7;
           grid-column-start: 2;
           grid-column-end: 3;
-              color: black; }
+              color: black;     font-size: 30px;}
           
           .button9 {
           grid-row-start: 3;
           grid-row-end: 4;
           grid-column-start: 3;
           grid-column-end: 4;
-              color: black; }
+              color: black;     font-size: 30px;}
 
           
           .button10 {
@@ -132,7 +133,7 @@
           grid-row-end: 5;
           grid-column-start: 3;
           grid-column-end: 4;
-              color: black; }
+              color: black;     font-size: 30px; }
 
           
           .button11 {
@@ -140,14 +141,14 @@
           grid-row-end: 6;
           grid-column-start: 3;
           grid-column-end: 4;
-              color: black; }
+              color: black;     font-size: 30px; }
       
           .button12 {
           grid-row-start: 6;
           grid-row-end: 7;
           grid-column-start: 3;
           grid-column-end: 4;
-              color: black; }
+              color: black;     font-size: 30px;}
       
       
           .footer {
@@ -156,7 +157,7 @@
           grid-column-start: 1;
           grid-column-end: 4;
           background: #dd0000;
-          color: white;}
+          color: white;     font-size: 30px;}
 
 
    
@@ -181,12 +182,11 @@
     var a = 0;
     var b = 0; 
     var c = 0; 
-    var d = 1;
+    var d = 0;
 
-    <h2>
-        function showA() { 
+        function showA() {  
             document.getElementById("numberOne").innerHTML = "A = " + a; 
-            document.getElementById("customC").innerHTML = "The value of A is shown";}
+            document.getElementById("customC").innerHTML = "The value of A is shown"; }
     
         function add1A() { 
             a = a + 1;
@@ -231,7 +231,7 @@
            document.getElementById("customC").innerHTML = "C has increased by 1";} 
 
     function addCustomC() {  
-            c = d; 
+            c = c + d; 
          document.getElementById("customC").innerHTML = "Click here to increase C by a custom number!";}
 
         function doubleAll() { 
@@ -244,7 +244,7 @@
             document.getElementById("customC").innerHTML = "Increase c by " + d; 
             d = d + 1;}
 
-</h2>
+
         
 </script>
 </head>
