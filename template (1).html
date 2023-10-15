@@ -47,7 +47,6 @@
           grid-column-end: 4;
           background: #dd0000;
            border: #ffffff solid 4px; 
-                   
             font-size: 50px;
           }
 
@@ -180,15 +179,15 @@
     </style> 
 <script> 
 
-    var a = 0;
-    var b = 0; 
-    var c = 0; 
-    var d = 0;
+    var a = 0 Math.min(Math.max(parseInt(number), 0), 100);
+    var b = 0 Math.min(Math.max(parseInt(number), 0), 100);
+    var c = 0 Math.min(Math.max(parseInt(number), 0), 100);
+    var d = 0 Math.min(Math.max(parseInt(number), 0), 100);
 
         function showA() {  
             document.getElementById("numberOne").innerHTML = "A = " + a; 
             document.getElementById("customC").innerHTML = "The value of A is shown"; }
-    
+           
         function add1A() { 
             a = a + 1;
               document.getElementById("customC").innerHTML = "A has increased by 1"; } 
@@ -239,7 +238,7 @@
             a = a * 2; 
             b = b * 2;
             c = c * 2; 
-          document.getElementById("customC").innerHTML = "A, B, and C have been doubled";} 
+          document.getElementById("customC").innerHTML = "A, B, and C have been doubled"; } 
 
        function showFooter() {
             document.getElementById("customC").innerHTML = "Increase c by " + d; 
