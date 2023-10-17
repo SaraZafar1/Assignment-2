@@ -185,18 +185,22 @@
     var d = 0;
 
         function showA() {  
+            document.getElementById("communicate").innerHTML = "You want to show A";
             document.getElementById("numberOne").innerHTML = "A = " + a; 
             document.getElementById("customC").innerHTML = "The value of A is shown"; }
            
         function add1A() { 
             a = a + 1;
+              document.getElementById("communicate").innerHTML = "You want to add 1 to A";
               document.getElementById("customC").innerHTML = "A has increased by 1"; } 
 
         function addTen() {
+            document.getElementById("communicate").innerHTML = "You want to add 10 to A";
             a = a + 10;
               document.getElementById("customC").innerHTML = "A has increased by 10";}
 
         function add1All() {
+            document.getElementById("communicate").innerHTML = "You want to add 1 to each value";
             a = a + 1; 
             b = b + 1; 
             c = c + 1; 
@@ -204,45 +208,54 @@
 
         function showB() {
             document.getElementById("numberTwo").innerHTML = "B = " + b;
-            document.getElementById("customC").innerHTML = "The value of B is shown";}
+            document.getElementById("customC").innerHTML = "The value of B is shown";
+            document.getElementById("communicate").innerHTML = "You want to show B";}
             
         function add1B() {
             b = b + 1;
-              document.getElementById("customC").innerHTML = "B has increased by 1";} 
+              document.getElementById("customC").innerHTML = "B has increased by 1";
+              document.getElementById("communicate").innerHTML = "You want to add 1 to B";} 
 
         function halfAll() {
             a = a / 2;
             b = b / 2; 
             c = c / 2;
-             document.getElementById("customC").innerHTML = "A, B, and C have been halved";}
+             document.getElementById("customC").innerHTML = "A, B, and C have been halved";
+             document.getElementById("communicate").innerHTML = "You want to half A, B, and C"}
 
         function resetAll() {
             a = 0;
             b = 0;
             c = 0;
-             document.getElementById("customC").innerHTML = "A, B, and C have been reset";}
+             document.getElementById("customC").innerHTML = "A, B, and C have been reset";
+             document.getElementById("communicate").innerHTML = "You want to reset A, B, and C";}
 
         function showC() { 
             document.getElementById("numberNine").innerHTML = "C = " + c;
-           document.getElementById("customC").innerHTML = "The value of C is shown";}
+            document.getElementById("customC").innerHTML = "The value of C is shown";
+            document.getElementById("communicate").innerHTML = "You want to show C";}
 
         function add1C() {
             c = c + 1;
-           document.getElementById("customC").innerHTML = "C has increased by 1";} 
+           document.getElementById("customC").innerHTML = "C has increased by 1";
+           document.getElementById("communicate").innerHTML = "You want to add 1 to C";} 
 
     function addCustomC() {  
             c = c + d; 
-         document.getElementById("customC").innerHTML = "Click here to increase C by a custom number!";}
+         document.getElementById("customC").innerHTML = "Click here to increase C by a custom number!";
+         document.getElementById("communicate").innerHTML = "You want to increase C by a custom number";}
 
         function doubleAll() { 
             a = a * 2; 
             b = b * 2;
             c = c * 2; 
-          document.getElementById("customC").innerHTML = "A, B, and C have been doubled"; } 
+          document.getElementById("customC").innerHTML = "A, B, and C have been doubled"; 
+          document.getElementById("communicate").innerHTML = "You want to double A, B, and C";} 
 
        function showFooter() {
             document.getElementById("customC").innerHTML = "Increase c by " + d; 
-            d = d + 1;}
+            d = d + 1; 
+            document.getElementById("communicate").innerHTML = "You want to customize what you're adding to C";}
 
 
         
@@ -258,7 +271,7 @@
 
 
 
-    <div class="informationDisplay">
+    <div id = "communicate" class="informationDisplay">
         Use the buttons below to activate the tracker!
 
       
