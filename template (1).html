@@ -185,43 +185,51 @@
     var d = 0;
 
         function showA() {  
-            document.getElementById("communicate").innerHTML = "You want to show A";
-            document.getElementById("numberOne").innerHTML = "A = " + a; 
-            document.getElementById("customC").innerHTML = "The value of A is shown"; }
+            document.getElementById("communicate").innerHTML = "A = " + a;
+            document.getElementById("customC").innerHTML = "The value of A is shown"; 
+         }
            
         function add1A() { 
             a = a + 1;
               document.getElementById("communicate").innerHTML = "You want to add 1 to A";
-              document.getElementById("customC").innerHTML = "A has increased by 1"; } 
+              document.getElementById("customC").innerHTML = "A has increased by 1";  
+             
+        if(a>=100) document.getElementById("numberFive").disabled = true;}
 
         function addTen() {
             document.getElementById("communicate").innerHTML = "You want to add 10 to A";
             a = a + 10;
-              document.getElementById("customC").innerHTML = "A has increased by 10";}
+              document.getElementById("customC").innerHTML = "A has increased by 10";
+              if(a>=100) document.getElementById("numberThree").disabled = true;}
 
         function add1All() {
             document.getElementById("communicate").innerHTML = "You want to add 1 to each value";
             a = a + 1; 
             b = b + 1; 
             c = c + 1; 
-               document.getElementById("customC").innerHTML = "A, B, and C have increased by 1";}
-
+               document.getElementById("customC").innerHTML = "A, B, and C have increased by 1"; 
+               if(a>=100) document.getElementById("numberFour").disabled = true; 
+               if(b>=100) document.getElementById("numberFour").disabled = true;
+               if(c>=100) document.getElementById("numberFour").disabled = true;}
         function showB() {
-            document.getElementById("numberTwo").innerHTML = "B = " + b;
+            document.getElementById("communicate").innerHTML = "B = " + b;
             document.getElementById("customC").innerHTML = "The value of B is shown";
-            document.getElementById("communicate").innerHTML = "You want to show B";}
+
+           }
             
         function add1B() {
             b = b + 1;
               document.getElementById("customC").innerHTML = "B has increased by 1";
-              document.getElementById("communicate").innerHTML = "You want to add 1 to B";} 
+              document.getElementById("communicate").innerHTML = "You want to add 1 to B"; 
+             } 
 
         function halfAll() {
-            a = a / 2;
-            b = b / 2; 
-            c = c / 2;
+            a =Math.round(a / 2);
+            b =Math.round(b / 2); 
+            c =Math.round(c / 2);
              document.getElementById("customC").innerHTML = "A, B, and C have been halved";
-             document.getElementById("communicate").innerHTML = "You want to half A, B, and C"}
+             document.getElementById("communicate").innerHTML = "You want to half A, B, and C"
+            }
 
         function resetAll() {
             a = 0;
@@ -231,19 +239,21 @@
              document.getElementById("communicate").innerHTML = "You want to reset A, B, and C";}
 
         function showC() { 
-            document.getElementById("numberNine").innerHTML = "C = " + c;
+            document.getElementById("communicate").innerHTML = "C = " + c;
             document.getElementById("customC").innerHTML = "The value of C is shown";
-            document.getElementById("communicate").innerHTML = "You want to show C";}
+     }
 
         function add1C() {
             c = c + 1;
            document.getElementById("customC").innerHTML = "C has increased by 1";
-           document.getElementById("communicate").innerHTML = "You want to add 1 to C";} 
+           document.getElementById("communicate").innerHTML = "You want to add 1 to C";
+          } 
 
     function addCustomC() {  
             c = c + d; 
          document.getElementById("customC").innerHTML = "Click here to increase C by a custom number!";
-         document.getElementById("communicate").innerHTML = "You want to increase C by a custom number";}
+         document.getElementById("communicate").innerHTML = "You want to increase C by a custom number"; 
+        }
 
         function doubleAll() { 
             a = a * 2; 
@@ -255,8 +265,8 @@
        function showFooter() {
             document.getElementById("customC").innerHTML = "Increase c by " + d; 
             d = d + 1; 
-            document.getElementById("communicate").innerHTML = "You want to customize what you're adding to C";}
-
+            document.getElementById("communicate").innerHTML = "You want to customize what you're adding to C"; 
+       }
 
         
 </script>
@@ -286,25 +296,23 @@
     </div>
 
     <div class="button2"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button onclick= "add1A();">
+        <button id="numberFive" onclick= "add1A();">
 <h2>Add 1 to A</h2>
         </button>
     </div>
 
     <div class="button3"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button onclick= "addTen();">
+        <button id = "numberThree" onclick= "addTen();">
 <h2>Add 10 to A</h2>
         </button>
 
     </div>
 
     <div class="button4" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button onclick= "add1All();">
+        <button id ="numberFour" onclick= "add1All();">
 
 <h2>Add 1 to all</h2>
-        </button>
-
-    </div>
+        </button>    </div>
    
     
     <div class="button5" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
@@ -315,7 +323,7 @@
 
     </div>
     <div class="button6" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button onclick="add1B();">
+        <button id="numberSix" onclick="add1B();">
 
 <h2>Add 1 to B</h2>
         </button>
@@ -344,21 +352,21 @@
     </div>
 
     <div class="button10" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button onclick="add1C();">
+        <button if="numberSeven" onclick="add1C();">
 
 <h2>Add 1 to C</h2>
         </button>
 
     </div>
     <div class="button11" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button onclick="addCustomC();">
+        <button id="numberEight" onclick="addCustomC();">
 
 <h2>Add custom to C</h2>
         </button>
 
     </div>
     <div class="button12" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button onclick="doubleAll();">
+        <button id="numberTen" onclick="doubleAll();">
 <h2>Double every value</h2>
 
         </button>
